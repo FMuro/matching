@@ -3,7 +3,7 @@ The goal of this `python` script is to rename PDF files according to a list of r
 We must have the following things:
 
 - A folder `myfolder` with all PDF files.
-- A text file `names.tex` or `names.csv` such that: 
+- A text file `names.txt` such that: 
   * The number of lines is the number of PDF files.
   * Lines resemble the PDF files's names. 
 
@@ -16,11 +16,13 @@ $ python3 matching.py path/to/names.csv path/to/myfolder
 
 The output is a folder `myfolder_renamed` within the current location containing the renamed PDF files.
 
+The option `-d` prints a list of the form `file name | macthed name | score` in decreasing failiure likelyhood order for you to check if there are errors.
+
 You can test this script as follows. Assuming you're at this project's root:
 
 ```
 $ cd test
-$ python3 ../matching.py names.tex myfolder
+$ python3 ../matching.py -d names.txt myfolder
 $ ls myfolder_renamed
 $ cat myfolder_matching.log
 ```
