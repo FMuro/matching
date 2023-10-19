@@ -15,7 +15,7 @@ $ python3 matching.py path/to/names.csv path/to/myfolder
 
 The output is a folder `myfolder_renamed` within the current location containing the renamed PDF files.
 
-The option `-d` prints a list of the form `file name | macthed name | score` in decreasing failiure likelyhood order for you to check if there are errors.
+The option `-d` prints a list of the form `file name | macthed name | score` in decreasing failure likelihood order for you to check if there are errors.
 
 You can test this script as follows. Assuming you're at this project's root:
 
