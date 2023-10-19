@@ -1,6 +1,6 @@
 import sys
 import os
-import libmatching
+import libmatching.libmatching as libmatching
 
 # separate user-provided options and arguments (only expected argument "-d" for debug/test)
 opts = [opt for opt in sys.argv[1:] if opt.startswith("-")]
@@ -10,7 +10,7 @@ args = [arg for arg in sys.argv[1:] if not arg.startswith("-")]
 data = args[0]
 
 # parse lines as elements of a list
-file=open(data, 'r')
+file = open(data, 'r')
 realnames = file.read().splitlines()
 file.close()
 
@@ -21,7 +21,7 @@ path = args[1]
 filenames = libmatching.PDF_names(path)
 
 # base folder name
-base_folder=os.path.basename(os.path.abspath(
+base_folder = os.path.basename(os.path.abspath(
     os.path.normpath(path)))
 
 # create output subfolder if it doesn't already exist
@@ -33,7 +33,7 @@ matches = libmatching.best_match_list(filenames, realnames)
 
 # print log if debug mode is on ("-d" option) in decreasing failure likelihood order
 if '-d' in opts:
-    sorted_log_list=sorted(matches, key=lambda x:x[2])
+    sorted_log_list = sorted(matches, key=lambda x: x[2])
     for match in sorted_log_list:
         print(*match, sep=' | ')
 
