@@ -7,7 +7,6 @@ We must have the following things:
   * The number of lines is the number of PDF files.
   * Lines resemble the PDF files's names. 
 
-
 Install the requirements and run the script as follows:
 
 ```
