@@ -31,7 +31,7 @@ os.makedirs(output_folder, exist_ok=True)
 # create best match list for filenames and realnames
 matches = libmatching.best_match_list(filenames, realnames)
 
-# print log if debug mode is on ("-d" option) in decreasing failiure likelyhood order
+# print log if debug mode is on ("-d" option) in decreasing failure likelihood order
 if '-d' in opts:
     sorted_log_list=sorted(matches, key=lambda x:x[2])
     for match in sorted_log_list:
