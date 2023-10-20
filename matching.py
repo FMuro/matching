@@ -29,7 +29,8 @@ output_folder = base_folder+'_renamed'
 os.makedirs(output_folder, exist_ok=True)
 
 # create best match list for filenames and realnames
-matches = libmatching.best_match_list(filenames, realnames)
+# elements of this list are of the form [filename, best realname match, score]
+matches = libmatching.best_matches(filenames, realnames)[0]
 
 # print log if debug mode is on ("-d" option) in decreasing failure likelihood order
 if '-d' in opts:
