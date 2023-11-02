@@ -23,5 +23,4 @@ You can test this script as follows. Assuming you're at this project's root:
 $ cd test
 $ python3 ../matching.py -d names.txt myfolder
 $ ls myfolder_renamed
-$ cat myfolder_matching.log
 ```
