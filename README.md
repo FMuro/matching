@@ -10,7 +10,7 @@ We must have the following things:
 Install the requirements and run the script as follows:
 
 ```
-$ python3 matching.py path/to/names.csv path/to/myfolder
+$ python3 matching.py path/to/names.txt path/to/myfolder
 ```
 
 The output is a folder `myfolder_renamed` within the current location containing the renamed PDF files.
