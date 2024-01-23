@@ -27,7 +27,7 @@ $ matching path/to/names.txt path/to/myfolder
 
 The output is a folder `myfolder_renamed` within the current location containing the renamed PDF files.
 
-The option `-d` prints a list of the form `file name | macthed name | score` in decreasing failure likelihood order for you to check if there are errors.
+The option `-d` prints a list of the form `file name | matched name | score` in decreasing failure likelihood order for you to check if there are errors.
 
 # Testing
 
