@@ -31,7 +31,7 @@ The option `-d` prints a list of the form `file name | macthed name | score` in 
 
 # Testing
 
-You can test this script by downloading the `test` folder and running the following commands:
+You can test this package by downloading the `test` folder and running the following commands:
 
 ```
 $ cd test
