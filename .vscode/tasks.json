@@ -11,7 +11,7 @@
         {
             "label": "Tests",
             "type": "shell",
-            "command": "cd test && rm -r myfolder_renamed && matching -d names.txt myfolder && ls myfolder_renamed && cd .."
+            "command": "cd test && rm -r myfolder_matching ; matching -v -l names.txt -f myfolder && ls myfolder_matching && cd .."
         },
     ]
 }

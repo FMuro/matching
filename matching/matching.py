@@ -1,15 +1,26 @@
 import sys
 import os
 from libmatching.libmatching import PDF_names, best_matches, rename_files
+import argparse
 
-# separate user-provided options and arguments (only expected argument "-d" for debug/test)
-opts = [opt for opt in sys.argv[1:] if opt.startswith("-")]
-args = [arg for arg in sys.argv[1:] if not arg.startswith("-")]
+# CLI arguments
+
+parser = argparse.ArgumentParser(
+    prog='matching',
+    description='Rename PDFs according to a list of resembling names',
+    epilog='Hope this helps!')
+
+parser.add_argument('-l', '--list', help='list of real names')
+parser.add_argument('-f', '--folder', help='folder containing the PDF files')
+parser.add_argument('-v', '--verbose', action='store_true',
+                    help='print matching list with scores')
+
+args = parser.parse_args()
 
 
 def funcion():
     # text file with real names
-    data = args[0]
+    data = args.list
 
     # parse lines as elements of a list
     file = open(data, 'r')
@@ -17,7 +28,7 @@ def funcion():
     file.close()
 
     # folder with the PDF files, whose names should be more or less the previous real names
-    path = args[1]
+    path = args.folder
 
     # get the list of PDF file names (without extension) in path
     filenames = PDF_names(path)
@@ -27,15 +38,15 @@ def funcion():
         os.path.normpath(path)))
 
     # create output subfolder if it doesn't already exist
-    output_folder = base_folder+'_renamed'
+    output_folder = base_folder+'_matching'
     os.makedirs(output_folder, exist_ok=True)
 
     # create best match list for filenames and realnames
     # elements of this list are of the form [filename, best realname match, score]
     matches = best_matches(filenames, realnames)[0]
 
-    # print log if debug mode is on ("-d" option) in decreasing failure likelihood order
-    if '-d' in opts:
+    # print log if verbose mode is on ("-v" option) in decreasing failure likelihood order
+    if args.verbose:
         sorted_log_list = sorted(matches, key=lambda x: x[2])
         for match in sorted_log_list:
             print(*match, sep=' | ')

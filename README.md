@@ -17,17 +17,21 @@ Use this command to update the package too.
 We must have the following things:
 
 - A folder `myfolder` with all PDF files.
-- A text file `names.txt` such that: 
-  * The number of lines is the number of PDF files.
-  * Lines resemble the PDF files's names. 
+- A text file `names.txt` whose lines resemble the PDF files's names. 
 
 ```
-$ matching path/to/names.txt path/to/myfolder
+$ matching --list path/to/names.txt --folder path/to/myfolder
 ```
 
-The output is a folder `myfolder_renamed` within the current location containing the renamed PDF files.
+The output is a folder `myfolder_matching` within the current location containing the renamed PDF files.
 
-The option `-d` prints a list of the form `file name | matched name | score` in decreasing failure likelihood order for you to check if there are errors.
+The option `-v` prints a list of the form `file name | matched name | score` in decreasing failure likelihood order for you to check if there are errors.
+
+You can get help by running:
+
+```
+$ matching -h
+```
 
 # Testing
 
@@ -35,6 +39,6 @@ You can test this package by downloading the `test` folder and running the follo
 
 ```
 $ cd test
-$ matching.py -d names.txt myfolder
-$ ls myfolder_renamed
+$ matching -v -l names.txt -f myfolder
+$ ls myfolder_matching
 ```
