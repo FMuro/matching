@@ -1,4 +1,3 @@
-import sys
 import os
 from libmatching.libmatching import PDF_names, best_matches, rename_files
 import argparse
