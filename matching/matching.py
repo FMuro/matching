@@ -1,5 +1,5 @@
 import os
-from libmatching.libmatching import PDF_names, best_matches, rename_files
+from libmatching.libmatching import PDF_names, best_matches, rename_files, sorted_table
 import argparse
 
 # CLI arguments
@@ -46,9 +46,7 @@ def funcion():
 
     # print log if verbose mode is on ("-v" option) in decreasing failure likelihood order
     if args.verbose:
-        sorted_log_list = sorted(matches, key=lambda x: x[2])
-        for match in sorted_log_list:
-            print(*match, sep=' | ')
+        sorted_table(matches)
 
     # trim scores
     for match in matches:
