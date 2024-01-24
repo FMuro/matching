@@ -23,7 +23,7 @@ We must have the following things:
 $ matching --list path/to/names.txt --folder path/to/myfolder
 ```
 
-The output is a folder `myfolder_matching` within the current location containing the renamed PDF files.
+The output is a folder `myfolder_matched` within the current location containing the renamed PDF files.
 
 The option `-v` prints a list of the form `file name | matched name | score` in decreasing failure likelihood order for you to check if there are errors.
 
@@ -40,5 +40,5 @@ You can test this package by downloading the `test` folder and running the follo
 ```
 $ cd test
 $ matching -v -l names.txt -f myfolder
-$ ls myfolder_matching
+$ ls myfolder_matched
 ```

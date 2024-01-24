@@ -38,7 +38,7 @@ def funcion():
         os.path.normpath(path)))
 
     # create output subfolder if it doesn't already exist
-    output_folder = base_folder+'_matching'
+    output_folder = base_folder+'_matched'
     os.makedirs(output_folder, exist_ok=True)
 
     # create best match list for filenames and realnames
