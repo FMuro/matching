@@ -42,3 +42,9 @@ $ cd test
 $ matching -v -l names.txt -f myfolder
 $ ls myfolder_matched
 ```
+
+# Remove
+
+```
+pip uninstall matching
+```
