@@ -20,7 +20,7 @@ We must have the following things:
 - A text file `names.txt` whose lines resemble the PDF files's names. 
 
 ```
-$ matching --list path/to/names.txt --folder path/to/myfolder
+matching --list path/to/names.txt --folder path/to/myfolder
 ```
 
 The output is a folder `myfolder_matched` within the current location containing the renamed PDF files.
@@ -30,7 +30,7 @@ The option `-v` prints a list of the form `file name | matched name | score` in 
 You can get help by running:
 
 ```
-$ matching -h
+matching -h
 ```
 
 # Testing
@@ -38,7 +38,7 @@ $ matching -h
 You can test this package by downloading the `test` folder and running the following commands:
 
 ```
-$ cd test
-$ matching -v -l names.txt -f myfolder
-$ ls myfolder_matched
+cd test
+matching -v -l names.txt -f myfolder
+ls myfolder_matched
 ```

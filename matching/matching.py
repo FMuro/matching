@@ -9,8 +9,9 @@ parser = argparse.ArgumentParser(
     description='Rename PDFs according to a list of resembling names',
     epilog='Hope this helps!')
 
-parser.add_argument('-l', '--list', help='list of real names')
-parser.add_argument('-f', '--folder', help='folder containing the PDF files')
+parser.add_argument('-l', '--list', help='list of real names', required=True)
+parser.add_argument(
+    '-f', '--folder', help='folder containing the PDF files', required=True)
 parser.add_argument('-v', '--verbose', action='store_true',
                     help='print matching list with scores')
 
