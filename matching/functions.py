@@ -7,23 +7,6 @@ import collections
 import shutil
 from unidecode import unidecode
 from tabulate import tabulate
-import argparse
-
-# CLI arguments
-
-parser = argparse.ArgumentParser(
-    prog='matching',
-    description='Rename PDFs according to a list of resembling names',
-    epilog='Hope this helps!')
-
-parser.add_argument('-l', '--list', help='list of real names', required=True)
-parser.add_argument(
-    '-f', '--folder', help='folder containing the PDF files', required=True)
-parser.add_argument('-v', '--verbose', action='store_true',
-                    help='print matching list with scores')
-
-args = parser.parse_args()
-
 
 # get the list of PDF file names (without extension) in path
 
