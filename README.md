@@ -39,6 +39,7 @@ You can test this package by downloading the `test` folder and running the follo
 
 ```
 cd test
+rm -rf myfolder_matched
 matching -v -l names.txt -f myfolder
 ls myfolder_matched
 ```
