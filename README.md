@@ -11,6 +11,17 @@ pip install --upgrade git+https://github.com/FMuro/matching.git#egg=matching
 ```
 
 Use this command to update the package too. 
+Do you use `pipx`? This is typical if you have `python` installed on macOS through `homebrew`. Then the command to install is:
+
+```
+pipx install git+https://github.com/FMuro/matching.git#egg=matching
+```
+
+The command to update is:
+
+```
+pipx upgrade csus
+```
 
 # How to use
 
@@ -48,4 +59,10 @@ ls myfolder_matched
 
 ```
 pip uninstall matching
+```
+
+If you installed it using `pipx`:
+
+```
+pipx uninstall csus
 ```
