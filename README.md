@@ -20,7 +20,7 @@ pipx install git+https://github.com/FMuro/matching.git#egg=matching
 The command to update is:
 
 ```
-pipx upgrade csus
+pipx upgrade matching
 ```
 
 # How to use
@@ -64,5 +64,5 @@ pip uninstall matching
 If you installed it using `pipx`:
 
 ```
-pipx uninstall csus
+pipx uninstall matching
 ```
